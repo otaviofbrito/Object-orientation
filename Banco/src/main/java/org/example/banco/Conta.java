@@ -11,13 +11,19 @@ public class Conta {
         return this.saldo;
     }
 
-    public void depositar(double valor){
-        this.saldo+=valor;
+    public boolean depositar(double valor){
+        if(valor > 0){
+            this.saldo+=valor;
+            return true;
+        }
+        return false;
     }
-    public void sacar(double valor){
+    public boolean sacar(double valor){
         if(valor <= saldo){
             saldo -= valor;
+            return true;
         }
+        return  false;
     }
 
 }

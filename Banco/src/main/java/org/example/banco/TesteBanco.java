@@ -1,18 +1,20 @@
 package org.example.banco;
 
+import java.util.Scanner;
+
 public class TesteBanco {
 
     public static void main(String[] args){
 
-        Conta cliente = new Conta(1000);
-        System.out.println("Criando conta com saldo de: " + cliente.getSaldo());
-        System.out.println("sacando: 250");
-        cliente.sacar(250);
-        System.out.println("depositando: 320.50");
-        cliente.depositar(320.50);
-        System.out.println("sacando: 120");
-        cliente.sacar(120);
-        System.out.println("saldo de: " + cliente.getSaldo());
+        Cliente cliente = new Cliente("Otavio", "Brito");
+        Conta conta = new Conta(50000);
+        cliente.setConta(conta);
+        System.out.println("Cliente: " + cliente.getNome() + ", saldo: " + cliente.getConta().getSaldo());
+        System.out.println("Sacar 1200" + conta.sacar(1200));
+        System.out.println("depositar 8525" + conta.depositar(8525));
+        System.out.println("sacar 12800" + conta.sacar(12800));
+        System.out.println("sacar 50000" + conta.sacar(50000));
+        System.out.println("saldo: " + conta.getSaldo());
     }
 
 }
