@@ -6,15 +6,24 @@ public class TesteBanco {
 
     public static void main(String[] args){
 
-        Cliente cliente = new Cliente("Otavio", "Brito");
-        Conta conta = new Conta(50000);
-        cliente.setConta(conta);
-        System.out.println("Cliente: " + cliente.getNome() + ", saldo: " + cliente.getConta().getSaldo());
-        System.out.println("Sacar 1200" + conta.sacar(1200));
-        System.out.println("depositar 8525" + conta.depositar(8525));
-        System.out.println("sacar 12800" + conta.sacar(12800));
-        System.out.println("sacar 50000" + conta.sacar(50000));
-        System.out.println("saldo: " + conta.getSaldo());
+        Banco banco = new Banco();
+        Cliente c1 = new Cliente("Rogerio", "gordo");
+        Cliente c2 = new Cliente("alicia", "garnier");
+        Cliente c3 = new Cliente("otavio", "brito");
+        Conta conta1 = new Conta(100000);
+        Conta conta2 = new Conta(300000);
+        Conta conta3 = new Conta(20000);
+        c1.setConta(conta1);
+        c2.setConta(conta2);
+        c3.setConta(conta3);
+
+        banco.addCliente(c1);
+        banco.addCliente(c2);
+        banco.addCliente(c3);
+        System.out.println("Clientes: " + banco.getNumeroDeClientes());
+        System.out.println("Cliente:" + banco.getCliente(0).getNome() + ", saldo: " + conta1.getSaldo());
+        System.out.println("Cliente:" + banco.getCliente(1).getNome() + ", saldo: " + conta2.getSaldo());
+        System.out.println("Cliente:" + banco.getCliente(2).getNome() + ", saldo: " + conta3.getSaldo());
     }
 
 }
