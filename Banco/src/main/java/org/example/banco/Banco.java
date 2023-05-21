@@ -1,25 +1,23 @@
 package org.example.banco;
 
-public class Banco {
-    private Cliente [] clientes;
-    private int numeroDeClientes;
+import java.util.ArrayList;
 
+public class Banco {
+    private ArrayList<Cliente> clientes = new ArrayList<>();
 
     public Banco(){
-       clientes = new Cliente[5];
     }
 
     public void addCliente(Cliente cliente){
-        this.clientes[numeroDeClientes] = cliente;
-        numeroDeClientes++;
+        clientes.add(cliente);
     }
 
     public Cliente getCliente(int index){
-        return this.clientes[index];
+        return clientes.get(index);
     }
 
     public int getNumeroDeClientes(){
-        return this.numeroDeClientes;
+        return clientes.size();
     }
 
 
