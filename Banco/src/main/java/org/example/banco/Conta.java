@@ -1,7 +1,7 @@
 package org.example.banco;
 
 public class Conta {
-    private double saldo;
+    protected double saldo;  //protected acessivel para subclasses
 
     public Conta(double saldoInicial){
         this.saldo = saldoInicial;
