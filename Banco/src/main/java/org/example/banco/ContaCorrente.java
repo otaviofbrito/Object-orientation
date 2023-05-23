@@ -13,7 +13,7 @@ public class ContaCorrente extends Conta{
 
     @Override
     public boolean sacar(double valor){
-        if(this.saldo + chequeEspecial <= valor){
+        if(this.saldo + chequeEspecial >= valor){
             saldo = saldo - valor;
             return true;
         }else return false;
