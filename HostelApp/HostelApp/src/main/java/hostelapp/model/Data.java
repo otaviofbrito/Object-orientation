@@ -1,0 +1,51 @@
+package hostelapp.model;
+
+import java.util.ArrayList;
+
+public class Data {
+    private int day;
+    private int month;
+    private int year;
+
+    private ArrayList<Reservation> reservations = new ArrayList<>();
+
+    public Data(){}
+    public Data(int day, int month, int year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public ArrayList<Reservation> getReservations(){
+        return reservations;
+    }
+
+    public void addReservation(Reservation reservation){
+        this.reservations.add(reservation);
+    }
+
+}

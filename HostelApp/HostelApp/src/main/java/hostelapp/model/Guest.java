@@ -6,6 +6,8 @@ public class Guest {
     private String lastname;
     private Adress adress;
 
+    private Data birthday;
+
     private String email;
     public Guest(){
         this(null);
@@ -54,4 +56,13 @@ public class Guest {
     public void setAdress(Adress adress){
         this.adress = adress;
     }
+
+    public Data getBirthday(){
+        return birthday;
+    }
+
+    public void setBirthday(Data birthday){
+        this.birthday = birthday;
+    }
+
 }
