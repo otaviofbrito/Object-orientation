@@ -1,12 +1,11 @@
-package org.example.banco;
+package org.example.banco.dominio;
 
 import java.util.ArrayList;
 
 public class Cliente {
     private String nome;
     private String sobrenome;
-    private ContaCorrente contaCorrente;
-    private ContaPoupanca contaPoupanca;
+    private ArrayList<Conta> contas = new ArrayList<>();
 
     public Cliente(String nome, String sobrenome){
         this.nome = nome;
@@ -29,19 +28,14 @@ public class Cliente {
         this.sobrenome = sobrenome;
     }
 
-    public ContaCorrente getContaCorrente() {
-        return contaCorrente;
+    public void addConta(Conta conta){
+        contas.add(conta);
+    }
+    public Conta getConta(int index){
+        return contas.get(index);
+    }
+    public int getNumeroDeContas(){
+        return contas.size();
     }
 
-    public void setContaCorrente(ContaCorrente contaCorrente) {
-        this.contaCorrente = contaCorrente;
-    }
-
-    public ContaPoupanca getContaPoupanca() {
-        return contaPoupanca;
-    }
-
-    public void setContaPoupanca(ContaPoupanca contaPoupanca) {
-        this.contaPoupanca = contaPoupanca;
-    }
 }

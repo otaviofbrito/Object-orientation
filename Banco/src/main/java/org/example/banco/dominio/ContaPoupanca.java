@@ -1,4 +1,4 @@
-package org.example.banco;
+package org.example.banco.dominio;
 
 public class ContaPoupanca extends Conta {
     private double taxaDeRendimento;

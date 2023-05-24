@@ -1,4 +1,4 @@
-package org.example.banco;
+package org.example.banco.dominio;
 
 public class Conta {
     protected double saldo;  //protected acessivel para subclasses
